@@ -8,7 +8,8 @@ docker run --rm --name <nome_container> <id_imagem>
 ou
 docker run -d --name <nome_container> -p <porta>:<porta> <nome_imagem>
 
-ex: docker run -d --name container_api_crawler_livro -p 80:80 imagem_api_crawler_livro
+ex: docker run -rm --name container_api_crawler_livro -p 80:80 imagem_api_crawler_livro
+# o -rm é pra apagar o container depois de fechar
 
 deletar uma imagem
 docker rmi <id_da_imagem>
