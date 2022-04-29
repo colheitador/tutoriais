@@ -1,0 +1,46 @@
+lembre-se de remover os <>
+
+criar imagem
+docker build -t <nome_imagem> .
+
+criar container a partir da imagem
+docker run --rm --name <nome_container> <id_imagem>
+ou
+docker run -d --name <nome_container> -p <porta>:<porta> <nome_imagem>
+
+ex: docker run -d --name container_api_crawler_livro -p 80:80 imagem_api_crawler_livro
+
+deletar uma imagem
+docker rmi <id_da_imagem>
+
+deletar tudo
+docker rmi -f $(docker images -a)
+
+ver imagens, containers e seus pesos
+docker system df
+
+ver imagens
+docker image ls
+
+ver todos os containers
+docker container ls -a
+
+Run the following command to remove Docker container:
+docker stop <Container_ID>
+docker rm <Container_ID>
+
+
+Optional: Run the following command to remove the container forcefully:
+docker rm -f < Container_ID>
+
+
+Run the following command to remove the Docker image:
+docker rmi -f <Image_name>
+
+
+*extra (não é um comando docker)
+se a criação da imagem der um problema de permissão, conceda a permissão assim
+chmod u+x <arquivo.extensão>
+
+
+
